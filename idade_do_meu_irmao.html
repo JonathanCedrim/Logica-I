@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Idade Do Meu Irmão</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        let idadeIrmao, minhaIdade;
+
+        idadeIrmao = prompt("Qual a idade do seu irmão?");
+        minhaIdade = prompt("Qual a sua idade?");
+
+        diferencaDeIdade(idadeIrmao, minhaIdade);
+
+        function diferencaDeIdade (idadeIrmao, minhaIdade) {
+            document.write("A diferença de idade do meu irmão e a minha é: " + (idadeIrmao - minhaIdade));
+            pulaLinha();
+        }
+
+        function pulaLinha() {
+            document.write("<br />")
+        }
+
+    </script>
+</html>

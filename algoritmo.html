@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+</body>
+<script>
+    //fazer a tabuada atÉ 10
+    /*pega input inicial do usuario, entra no loop, enquanto for != 0
+    */
+
+    function tabuada(tabuada) {
+        if(tabuada == 0) {
+            return 1;
+        }
+        document.write(tabuada + "<br />");
+        return tabuada * tabuada(tabuada - 1);
+    }
+
+    let tabuadaSelecionada = 0;
+
+    tabuadaSelecionada = document.prombt("Qual tabuada deseja?");
+
+    tabuada(tabuadaSelecionada);
+
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="functions.js">
+        
+        </script>
+    </head>
+    <body>
+        <input/>
+        <button>Adicionar ingrediente</button>
+    </body>
+
+    <script>
+            let input = document.querySelector("input");
+            let button = document.querySelector("button");
+            let receitas = [];
+            
+            button.onclick = adicionaIngrediente;
+            
+    
+            function criaReceita(nome, tamanho) {
+                receitas.push(new class receita {
+                    constructor(nome, tamanho){
+                        this.nome = nome; this.tamanho = tamanho; this.ingredientes = [tamanho];
+                    }
+                    toString() {
+                        return this.nome;
+                    }
+                });                
+            }
+
+            function adicionaIngrediente () {
+                let novaReceita = prompt("Deseja criar nova receita? S/N");
+                if(novaReceita == "S") {                
+                    criaReceita(prompt("Qual nome da receita?"), parseInt(prompt("Quantos ingredientes essa receita terá?")));
+                }
+                
+                let adicionarIngrediente = prompt("Deseja adicionar ingrediente? S/N" );
+
+                if(adicionarIngrediente == "S") {
+                    let receita = parseInt(prompt("A qual receita deseja adicionar o ingrediente? " + receitas.toString() ));
+                    receitas[receita].ingredientes.push(prompt("Escreva o nome do ingrediente"));
+                }                            
+            }
+
+            function exibeReceitas() {
+                alert(receitas);
+            }
+    </script>
+</html>

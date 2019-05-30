@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="functions.js"></script>
+    </head>
+    <body>
+        <input/> 
+        <br />
+        <button>Jogar!</button>
+    </body>
+    <script>
+        
+        let input = document.querySelector("input");
+        let button = document.querySelector("button");
+
+        button.onclick = jogar;
+
+
+        function jogar() {        
+            alert(sorteio(input.value));
+            input.focus();            
+        }
+    </script>
+</html>
